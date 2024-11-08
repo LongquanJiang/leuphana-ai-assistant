@@ -1,0 +1,10 @@
+Flask
+Flask-Session
+langchain
+langchain-community
+langchain-core
+langchain-chroma
+langchain-openai
+openai
+requests
+jq

@@ -1,0 +1,34 @@
+version: '1.0'
+services:
+  hawki:
+    build: ./hawki/
+    container_name: hawki-container
+    ports:
+      - "80:80"
+    networks:
+      - demo_network
+    volumes:
+      - ./hawki:/var/www/html
+      - shared-data:/data
+
+  chat:
+    build: ./chat/
+    container_name: chat-container
+    ports:
+      - "30003:30003"
+    networks:
+      - demo_network
+    volumes:
+      - shared-data:/data
+
+  scraper:
+    build: ./crawler/
+    container_name: scraper-container
+    volumes:
+      - shared-data:/app/LeuphanaScraper/json
+
+volumes:
+  shared-data:
+
+networks:
+  demo_network:

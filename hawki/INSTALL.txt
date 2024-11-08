@@ -1,0 +1,6 @@
+# cp ./private/.env.example ./private/.env
+# docker build -t hawki .
+# docker run -p 8080:80 hawki
+
+then open http://localhost:8080 on your web browser.
+Use the username password mentioned in .env file as TESTUSER and TESTPASSWORD.
